@@ -46,7 +46,7 @@ public class RegisterController {
 	}
 	
 	/**
-	 * POST oznacza wsad do bazy 
+	 * POST oznacza wsad do bazy a
 	 * 
 	 * @param user
 	 * @param result
