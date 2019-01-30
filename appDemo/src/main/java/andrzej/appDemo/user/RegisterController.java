@@ -46,7 +46,8 @@ public class RegisterController {
 	}
 	
 	/**
-	 * POST oznacza wsad do bazy a
+	 * POST - z biblioteki javax.ws.rs. tej samej co GET :) 
+	 * bedzie służyć do 
 	 * 
 	 * @param user
 	 * @param result
@@ -66,7 +67,12 @@ public class RegisterController {
 		
 		if(userExist != null) {
 			result.rejectValue("email", messageSource.getMessage("user.register.success",null, locale));
-		} else {
+		}
+		if(result.hasErrors()){
+			returnPage = "register";
+		}
+		else {
+		
 			userService.saveUser(user);
 			model.addAttribute("message", messageSource.getMessage("user.register.success", null, locale));
 			model.addAttribute("user", new User());
