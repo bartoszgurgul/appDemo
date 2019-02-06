@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService {
 		user.setActive(1);
 		
 		Role role = roleRepository.findByRole("ROLE_USER");
+		//TODO tutaj powinno być poprawione
 		user.setRoles(new HashSet<Role>(Arrays.asList(role)));
 
 		userRepository.save(user);
