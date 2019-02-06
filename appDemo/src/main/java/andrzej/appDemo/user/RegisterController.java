@@ -63,11 +63,11 @@ public class RegisterController {
 		
 		User userExist = userService.findUserByEmail(user.getEmail()); 
 		
+		new UserRegisterValidator().validateEmailExist(userExist, result);
+		
 		new UserRegisterValidator().validate(user, result);
 		
-		if(userExist != null) {
-			result.rejectValue("email", messageSource.getMessage("user.register.success",null, locale));
-		}
+		
 		if(result.hasErrors()){
 			returnPage = "register";
 		}

@@ -1,5 +1,6 @@
 package andrzej.appDemo.validators;
 
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 
@@ -34,19 +35,25 @@ public class UserRegisterValidator implements org.springframework.validation.Val
 		ValidationUtils.rejectIfEmpty(errors, "password", "error.userPassword.empty");
 		
 		if(u.getEmail() != null) {
-			boolean isMatch = AppdemoUtils.checkEmailOrPassword(AppDemoConstants.emailPattern, u.getEmail());
+			boolean isMatch = AppdemoUtils.checkEmailOrPassword(AppDemoConstants.EMAIL_PATTERN, u.getEmail());
 			if(!isMatch) {
 				errors.rejectValue("email", "error.userEmailIsNotMatch");
 			}
 		}
 		
 		if(u.getPassword() != null) {
-			boolean isMatch = AppdemoUtils.checkEmailOrPassword(AppDemoConstants.passwordPattern, u.getPassword());
+			boolean isMatch = AppdemoUtils.checkEmailOrPassword(AppDemoConstants.PASSWORD_PATTERN, u.getPassword());
 			if(!isMatch) {
 				errors.rejectValue("password", "error.userPasswordIsNotMatch");
 			}
 		}
 		
+	}
+
+	public void validateEmailExist(User user, Errors errors) {
+		if (user != null) {
+			errors.rejectValue("email", "error.userEmailExist");
+		}
 	}
 
 
