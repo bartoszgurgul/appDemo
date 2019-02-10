@@ -1,4 +1,4 @@
-package andrzej.appDemo.utils;
+package andrzej.appDemo.utilities;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

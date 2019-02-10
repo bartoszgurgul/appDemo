@@ -18,9 +18,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	 * tworzymy hasło 
 	 * @return
 	 */
-		@Bean
-		public BCryptPasswordEncoder pwdEncrypt() {
-			BCryptPasswordEncoder bcp = new BCryptPasswordEncoder();
-			return bcp;
-		}
+	@Bean
+	public BCryptPasswordEncoder pwdEncrypt() {
+		BCryptPasswordEncoder bcp = new BCryptPasswordEncoder();
+		return bcp;
+	}
 }

@@ -1,5 +1,6 @@
 package andrzej.appDemo.user;
 
+
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -12,7 +13,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
+
 
 @Entity
 @Table(name = "user")
@@ -47,9 +50,22 @@ public class User {
 	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
 
-
+	@Transient
+	private int nrRoli;
 	
 	
+	/**
+	 * @return the nrRole
+	 */
+	public int getNrRoli() {
+		return nrRoli;
+	}
+	/**
+	 * @param nrRole the nrRole to set
+	 */
+	public void setNrRoli(int nrRoli) {
+		this.nrRoli = nrRoli;
+	}
 	//gettery i settery
 	public int getId() {
 		return id;

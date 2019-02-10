@@ -1,12 +1,11 @@
 package andrzej.appDemo.validators;
 
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 
 import andrzej.appDemo.constants.AppDemoConstants;
 import andrzej.appDemo.user.User;
-import andrzej.appDemo.utils.AppdemoUtils;
+import andrzej.appDemo.utilities.AppdemoUtils;
 
 /**
  * @author BartoszGurgul
