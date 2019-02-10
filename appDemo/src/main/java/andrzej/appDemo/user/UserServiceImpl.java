@@ -22,7 +22,12 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
-	
+	/*
+	 * ta metoda zwraca nam calego obiekt usera wyszukanego po email 
+	 * dzieki tej metodzie mozemy sobie pracowac na te
+	 * (non-Javadoc)
+	 * @see andrzej.appDemo.user.UserService#findUserByEmail(java.lang.String)
+	 */
 	@Override
 	public User findUserByEmail(String email) {
 		return userRepository.findByEmail(email);
@@ -38,6 +43,12 @@ public class UserServiceImpl implements UserService {
 		user.setRoles(new HashSet<Role>(Arrays.asList(role)));
 
 		userRepository.save(user);
+	}
+
+	@Override
+	public void updateUserPassword(String newPassword, String email) {
+		userRepository.updateUserPassword(bCryptPasswordEncoder.encode(newPassword), email);
+		
 	}
 
 }

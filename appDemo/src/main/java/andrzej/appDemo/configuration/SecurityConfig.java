@@ -1,4 +1,5 @@
 package andrzej.appDemo.configuration;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.formLogin()
 		.loginPage("/login")
 		.failureUrl("/login?error=true")
-		.defaultSuccessUrl("/index").usernameParameter("email")
+		.defaultSuccessUrl("/").usernameParameter("email")
 		.passwordParameter("password")
 		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 		.logoutSuccessUrl("/")

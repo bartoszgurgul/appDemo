@@ -7,7 +7,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="profil.userDane"/></title>
 </head>
 <body>
@@ -76,10 +75,18 @@
 			</c:choose>
 		</td>
 	</tr>
-
+	
 </table>
+<table width="500" border="0" cellpadding="4" cellspacing="1" align="center">
 
-
+	<tr>
+		
+		<td align="center">
+			<input type="button" value="<s:message code="button.zmianaHasla"/>" 
+					onclick="window.location.href='${pageContext.request.contextPath}/editpassword'"/>
+		</td>
+	</tr>
+</table>
 
 
 </body>
