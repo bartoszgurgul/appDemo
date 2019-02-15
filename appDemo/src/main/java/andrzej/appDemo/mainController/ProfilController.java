@@ -17,11 +17,16 @@ import andrzej.appDemo.Entity.User;
 import andrzej.appDemo.Repository.UserService;
 import andrzej.appDemo.utilities.UserUtilities;
 import andrzej.appDemo.validators.ChangePasswordValidator;
-
+import andrzej.appDemo.validators.EditUserValidator;
 
 
 @Controller
 public class ProfilController {
+	
+	private static final  String EDIT_PAS = "editpassword";
+	private static final  String EDIT_PROFIL = "editprofil";
+	private static final  String AFTER_EDIT = "afteredit";
+	
 	
 	@Autowired
 	private UserService userService;
@@ -46,7 +51,16 @@ public class ProfilController {
 		String username = UserUtilities.getLoggerUser();
 		User user = userService.findUserByEmail(username);
 		model.addAttribute("user", user);
-		return "editpassword";
+		return EDIT_PAS;
+	}
+	@GET
+	@RequestMapping(value = "/editprofil")
+	public String changeUserProfil(Model model) {
+		String username = UserUtilities.getLoggerUser();
+		User user = userService.findUserByEmail(username);
+		model.addAttribute("user", user);
+		
+		return EDIT_PROFIL;
 	}
 	
 	@POST
@@ -56,15 +70,35 @@ public class ProfilController {
 		new ChangePasswordValidator().validate(user, result);
 		new ChangePasswordValidator().checkPasswords(user.getNewPassword(), result);
 		if (result.hasErrors()) {
-			returnPage = "editpassword";
+			returnPage = EDIT_PAS;
 		} else {
 			userService.updateUserPassword(user.getNewPassword(), user.getEmail());
-			returnPage = "editpassword";
+			returnPage = EDIT_PAS;
 			model.addAttribute("message", messageSource.getMessage("passwordChange.success", null, locale));
 		}
 		return returnPage;
 	}
 	
+	
+	@POST
+	@RequestMapping( value = "/updateprofil")
+	public String changeUserProfile(User user, BindingResult result, Model model, Locale locale) {
+		String returnPage = null;
+		
+		
+		new EditUserValidator().validate(user, result);
+		
+		if( result.hasErrors()) {
+			returnPage = EDIT_PROFIL;
+		} else {
+			userService.updateUserProfile(user.getName(), user.getLastName(), user.getEmail(), user.getId());
+			model.addAttribute("message", messageSource.getMessage("profilEdit.success",  null, locale));
+			returnPage = AFTER_EDIT;
+		}
+		
+		
+		return returnPage;
+	}
 	
 
 }

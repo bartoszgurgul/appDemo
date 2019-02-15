@@ -54,4 +54,10 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
+	@Override
+	public void updateUserProfile(String newName, String lastName, String newEmail, Integer id) {
+		userRepository.updateUserProfile(newName, lastName, newEmail, id);
+		
+	}
+
 }
