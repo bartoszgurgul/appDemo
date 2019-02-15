@@ -1,4 +1,6 @@
-package andrzej.appDemo.user;
+package andrzej.appDemo.Repository;
+
+import andrzej.appDemo.Entity.User;
 
 public interface UserService {
 	public User findUserByEmail(String email);

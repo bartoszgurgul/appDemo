@@ -5,8 +5,8 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
+import andrzej.appDemo.Entity.User;
 import andrzej.appDemo.constants.AppDemoConstants;
-import andrzej.appDemo.user.User;
 import andrzej.appDemo.utilities.AppdemoUtils;
 
 

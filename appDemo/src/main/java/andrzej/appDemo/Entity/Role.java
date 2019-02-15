@@ -1,4 +1,4 @@
-package andrzej.appDemo.user;
+package andrzej.appDemo.Entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

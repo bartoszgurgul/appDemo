@@ -1,4 +1,4 @@
-package andrzej.appDemo.user;
+package andrzej.appDemo.Entity;
 
 
 import java.util.Set;

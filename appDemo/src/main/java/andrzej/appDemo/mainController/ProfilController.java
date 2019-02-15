@@ -1,4 +1,4 @@
-package andrzej.appDemo.user;
+package andrzej.appDemo.mainController;
 
 
 import java.util.Locale;
@@ -13,6 +13,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import andrzej.appDemo.Entity.User;
+import andrzej.appDemo.Repository.UserService;
 import andrzej.appDemo.utilities.UserUtilities;
 import andrzej.appDemo.validators.ChangePasswordValidator;
 
