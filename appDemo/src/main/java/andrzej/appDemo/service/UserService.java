@@ -1,6 +1,8 @@
-package andrzej.appDemo.Repository;
+package andrzej.appDemo.service;
 
 
+
+import java.util.List;
 
 import andrzej.appDemo.Entity.User;
 
@@ -13,4 +15,5 @@ public interface UserService {
 
 	public void updateUserProfile(String newName, String lastName, String newEmail, Integer id);
 
+	public List<User> findAll();
 }

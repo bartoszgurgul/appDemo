@@ -8,13 +8,14 @@ import javax.ws.rs.POST;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import andrzej.appDemo.Entity.User;
-import andrzej.appDemo.Repository.UserService;
+import andrzej.appDemo.service.UserService;
 import andrzej.appDemo.utilities.UserUtilities;
 import andrzej.appDemo.validators.ChangePasswordValidator;
 import andrzej.appDemo.validators.EditUserValidator;
@@ -36,6 +37,7 @@ public class ProfilController {
 	
 	@GET
 	@RequestMapping(value = "/profil")
+	@Secured( value = {"ROLE_USER", "ROLE_ADMIN"})
 	public String showUserProfilePage(Model model) {	
 		String username = UserUtilities.getLoggerUser();
 		User user = userService.findUserByEmail(username);
@@ -47,6 +49,7 @@ public class ProfilController {
 	
 	@GET
 	@RequestMapping(value = "/editpassword")
+	@Secured( value = {"ROLE_USER", "ROLE_ADMIN"})
 	public String editUserPassword(Model model) {
 		String username = UserUtilities.getLoggerUser();
 		User user = userService.findUserByEmail(username);
@@ -65,7 +68,7 @@ public class ProfilController {
 	
 	@POST
 	@RequestMapping(value = "/updatepass")
-	public String changeUSerPassword(User user, BindingResult result, Model model, Locale locale) {
+	public String changeUserPassword(User user, BindingResult result, Model model, Locale locale) {
 		String returnPage = null;
 		new ChangePasswordValidator().validate(user, result);
 		new ChangePasswordValidator().checkPasswords(user.getNewPassword(), result);

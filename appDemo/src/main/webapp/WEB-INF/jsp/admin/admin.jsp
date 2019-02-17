@@ -12,6 +12,6 @@
 <body>
 <%@include file="/WEB-INF/incl/menu.app" %>
 <h2><s:message code="menu.adminPage"/></h2>
-<%@include file="/WEB-INF/incl/admenu.app" %>
+<%@include file="/WEB-INF/incl/adminmenu.app" %>
 </body>
 </html>

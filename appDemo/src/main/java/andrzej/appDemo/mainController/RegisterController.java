@@ -16,7 +16,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import andrzej.appDemo.Entity.User;
-import andrzej.appDemo.Repository.UserService;
+import andrzej.appDemo.service.UserService;
 import andrzej.appDemo.validators.UserRegisterValidator;
 
 /**
