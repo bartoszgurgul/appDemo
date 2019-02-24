@@ -8,5 +8,5 @@ import andrzej.appDemo.Entity.User;
 public interface AdminService {
 	
 	Page<User> findAll(Pageable pageAble);
-
+	User findUserById(int id);
 }

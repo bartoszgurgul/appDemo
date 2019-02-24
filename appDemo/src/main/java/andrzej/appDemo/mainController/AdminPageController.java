@@ -1,12 +1,16 @@
 package andrzej.appDemo.mainController;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
 import javax.ws.rs.GET;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.security.access.annotation.Secured;
@@ -17,16 +21,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import andrzej.appDemo.Entity.User;
 import andrzej.appDemo.service.AdminService;
-import andrzej.appDemo.service.UserService;
 
 @Controller
 public class AdminPageController {
 
 	private static final Logger LOG = LoggerFactory.getLogger(MainPageController.class);
-
+	private static int ELEMENTS = 5;
+	
 	@Autowired
 	private AdminService adminService;
 
+	@Autowired
+	private MessageSource messageSource;
+	
+	
 	@GET
 	@RequestMapping(value = "/admin")
 	@Secured(value = { "ROLE_ADMIN" })
@@ -40,7 +48,7 @@ public class AdminPageController {
 	@RequestMapping(value = "/admin/users/{page}")
 	@Secured(value = "ROLE_ADMIN")
 	public String openAdminAllUsersPage(@PathVariable("page") int page,  Model model) {
-		Page<User> pages = getAllUsersPageable(page);
+		Page<User> pages = getAllUsersPageable(page - 1);
 		int totalPages = pages.getTotalPages();
 		int currentPage = pages.getNumber();
 		
@@ -50,19 +58,55 @@ public class AdminPageController {
 		model.addAttribute("totalPages", totalPages);
 		model.addAttribute("currentPage", currentPage+1);
 		model.addAttribute("userList", userList);
+		model.addAttribute("recordStartCounter", currentPage*ELEMENTS);
 		return "admin/users";
 	}
 
+	@GET
+	@RequestMapping( value = "/admin/users/edit/{id}")
+	@Secured( value = "ROLE_ADMIN")
+	public String getUserToEdit(Model model, @PathVariable("id") int id) {
+		
+		
+		
+		User user = adminService.findUserById(id);
+		
+		Map<Integer, String> roleMap = prepareRoleMap();
+		
+		Map<Integer, String> activityMap = prepareActivityMap();
+		int role = user.getRoles().iterator().next().getId();
+		user.setNrRoli(role);
+		model.addAttribute("roleMap", roleMap);
+		model.addAttribute("activityMap", activityMap);
+		model.addAttribute("user", user);
+		return "admin/useredit" ;
+	}
 	
+
+
+	private Map<Integer, String> prepareRoleMap() {
+		Locale locale = Locale.getDefault();
+		Map<Integer, String> roleMap = new HashMap<>();
+		roleMap.put(1, messageSource.getMessage("word.admin", null, locale));
+		roleMap.put(2, messageSource.getMessage("word.user", null, locale));
+		return roleMap;
+	}
+	
+	private Map<Integer, String> prepareActivityMap() {
+		Locale locale = Locale.getDefault();
+		Map<Integer, String> activityMap = new HashMap<>();
+		activityMap.put(1, messageSource.getMessage("word.tak", null, locale));
+		activityMap.put(2, messageSource.getMessage("word.nie", null, locale));
+		return activityMap;
+	}
+
 	private Page<User> getAllUsersPageable(int page){
-		int elementsOnPage = 5;
-		Page<User> pages = adminService.findAll(PageRequest.of(page, elementsOnPage));
-				for (User users : pages) {
-					int numerRoli = users.getRoles().iterator().next().getId();
-
-					users.setNrRoli(numerRoli);
-
-				}
+		
+		Page<User> pages = adminService.findAll(PageRequest.of(page, ELEMENTS));
+		for (User users : pages) {
+			int numerRoli = users.getRoles().iterator().next().getId();
+			users.setNrRoli(numerRoli);
+		}
 		return pages;
 	}
 }
