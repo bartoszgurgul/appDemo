@@ -6,6 +6,7 @@ import java.util.Locale;
 import java.util.Map;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -82,6 +83,17 @@ public class AdminPageController {
 		return "admin/useredit" ;
 	}
 	
+	@POST
+	@Secured(value="ROLE_ADMIN")
+	@RequestMapping(value = "/admin/updateuser/{id}")
+	public String updateUser(@PathVariable("id") int id, User user) {
+		int nrRoli = user.getNrRoli();
+		int czyAktywny = user.getActive();
+		
+		adminService.updateUser(id, nrRoli, czyAktywny);
+		
+		return "redirect:/admin/users/1";
+	}
 
 
 	private Map<Integer, String> prepareRoleMap() {

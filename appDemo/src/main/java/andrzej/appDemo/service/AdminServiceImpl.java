@@ -31,4 +31,11 @@ public class AdminServiceImpl implements AdminService {
 		User user = adminRepository.findUserById(id);
 		return user;
 	}
+
+	@Override
+	public void updateUser(int userId, int nrRoli, int active) {
+		adminRepository.updateActiveUser(active, userId);
+		adminRepository.updateRoleUser(nrRoli, userId);
+		
+	}
 }

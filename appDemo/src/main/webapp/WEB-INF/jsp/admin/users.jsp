@@ -63,7 +63,7 @@ function defaultTrBg(row){
 		</tr>
 	</c:forEach>
 </table>
-<table width="1000" border="0" cellpadding="6" cellspacing="0" bgcolor="#595857">
+<table width="1000" border="0" cellpadding="6" cellspacing="0" bgcolor="#fff">
 	<tr>
 		<td width="300" align="left">
 			<s:message code="info.page"/> ${currentPage} <s:message code="info.from"/> ${totalPages}
