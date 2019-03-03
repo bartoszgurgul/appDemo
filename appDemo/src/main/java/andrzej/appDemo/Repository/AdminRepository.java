@@ -1,5 +1,8 @@
 package andrzej.appDemo.Repository;
 
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -31,4 +34,10 @@ public interface AdminRepository extends JpaRepository<User, Integer> {
 	@Query(value = "UPDATE user_role r SET r.role_id = :role_id "
 			+ "WHERE r.user_id = :id", nativeQuery=true)
 	void updateRoleUser(@Param("role_id") int role_id, @Param("id") int id);
+	
+	@Query(value = "SELECT * from User u WHERE "
+			+ "u.name LIKE %:param% "
+			+ "OR u.last_name LIKE %:param% "
+			+ "OR u.email LIKE %:param%", nativeQuery = true)
+	Page<User> findAllUser(@Param("param") String param, Pageable pageable);
 }

@@ -38,4 +38,10 @@ public class AdminServiceImpl implements AdminService {
 		adminRepository.updateRoleUser(nrRoli, userId);
 		
 	}
+
+	@Override
+	public Page<User> findAllUser(String param, Pageable pageable) {
+		
+		return adminRepository.findAllUser(param, pageable);
+	}
 }

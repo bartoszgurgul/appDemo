@@ -49,7 +49,7 @@ public class AdminPageController {
 	@RequestMapping(value = "/admin/users/{page}")
 	@Secured(value = "ROLE_ADMIN")
 	public String openAdminAllUsersPage(@PathVariable("page") int page,  Model model) {
-		Page<User> pages = getAllUsersPageable(page - 1);
+		Page<User> pages = getAllUsersPageable(page - 1, false, null);
 		int totalPages = pages.getTotalPages();
 		int currentPage = pages.getNumber();
 		
@@ -94,6 +94,25 @@ public class AdminPageController {
 		
 		return "redirect:/admin/users/1";
 	}
+	
+	@GET
+	@RequestMapping(value = "/admin/users/search/{searchString}/{page}")
+	@Secured(value = "ROLE_ADMIN")
+	public String openSearchUserPage(@PathVariable("searchString") String searchString, 
+									@PathVariable("page") int page,
+									Model model) {
+		Page<User> pages = getAllUsersPageable(page-1, true, searchString);
+		int totalPages = pages.getTotalPages();
+		int currentPage = pages.getNumber();
+		List<User> userList = pages.getContent();
+		model.addAttribute("totalPages", totalPages);
+		model.addAttribute("currentPage", currentPage);
+		model.addAttribute("userList", userList);
+		model.addAttribute("recordStartCounter", currentPage * ELEMENTS);
+		model.addAttribute("searchWord", searchString);
+		
+		return "admin/usersearch";
+	}
 
 
 	private Map<Integer, String> prepareRoleMap() {
@@ -112,9 +131,15 @@ public class AdminPageController {
 		return activityMap;
 	}
 
-	private Page<User> getAllUsersPageable(int page){
-		
-		Page<User> pages = adminService.findAll(PageRequest.of(page, ELEMENTS));
+	private Page<User> getAllUsersPageable(int page, boolean isSearching, String param){
+		Page<User> pages;
+		if(!isSearching) {
+			pages = adminService.findAll(PageRequest.of(page, ELEMENTS));
+			
+		}else {
+			pages = adminService.findAllUser(param, PageRequest.of(page, ELEMENTS));
+		}
+
 		for (User users : pages) {
 			int numerRoli = users.getRoles().iterator().next().getId();
 			users.setNrRoli(numerRoli);
