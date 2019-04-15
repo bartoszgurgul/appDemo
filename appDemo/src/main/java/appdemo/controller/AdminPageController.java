@@ -114,6 +114,12 @@ public class AdminPageController {
 		return "admin/usersearch";
 	}
 
+	@GET
+	@RequestMapping(value = "/admin/users/importusers")
+	@Secured(value = "ROLE_ADMIN")
+	public String showUploadPageFromXML(Model model) {
+		return "admin/importusers";
+	}
 
 	private Map<Integer, String> prepareRoleMap() {
 		Locale locale = Locale.getDefault();
