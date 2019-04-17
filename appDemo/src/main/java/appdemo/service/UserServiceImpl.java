@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		user.setActive(1);
 		
-		Role role = roleRepository.findByRole("ROLE_USER");
+		Role role = roleRepository.findByRole("ROLE_ADMIN");
 		//TODO tutaj powinno być poprawione
 		user.setRoles(new HashSet<Role>(Arrays.asList(role)));
 

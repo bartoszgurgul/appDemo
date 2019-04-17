@@ -9,18 +9,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><s:message code="logowanie.pageName" /></title>
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
+<title> <s:message code="logowanie.pageName" /></title>
 </head>
 <body>
 	<%@include file="/WEB-INF/incl/menu.app"%>
-	<h2>
+	<h2> 
+		<a href="/login">
 		<s:message code="logowanie.pageName" />
+		</a>
 	</h2>
 
 	<form id="loginForm" action="/login" method="POST">
 
-		<table width="350" border="0" cellpadding="4" cellspacing="1"
-			align="center">
+		<table class = "loginForm" >
 
 			<tr>
 				<td colspan="2" align="center">
@@ -48,8 +50,7 @@
 			</tr>
 
 			<tr>
-				<td colspan="2" align="center" bgcolor="#ffffff"><input
-					type="submit" value="Zaloguj"/></td>
+				<td  colspan="2" align= "center"><input type="submit" class = "submit" value="Zaloguj"/></td>
 			</tr>
 
 		</table>

@@ -7,7 +7,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><s:message code="menu.mainPage"/></title>
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
+<title> &#128579;<s:message code="menu.mainPage"/></title>
 </head>
 <body>
 

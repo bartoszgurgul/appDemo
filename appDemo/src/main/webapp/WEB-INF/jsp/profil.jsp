@@ -7,12 +7,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="profil.userDane"/></title>
 </head>
 <body>
 <%@include file="/WEB-INF/incl/menu.app" %>
 <div align="center">
-	<h2><s:message code="profil.userDane"/></h2>
+	<h2>	
+		<a href="/profil"><s:message code="profil.userDane"/>
+		</a>
+	</h2>
 </div>
 
 <table width="500" border="0" cellpadding="4" cellspacing="1" align="center">

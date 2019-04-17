@@ -6,11 +6,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="menu.adminPage"/></title>
 </head>
 <body>
 <%@include file="/WEB-INF/incl/menu.app" %>
-<h2><s:message code="menu.adminPage"/></h2>
+	<h2>
+	<a href= "/admin">
+		<s:message code="menu.adminPage"/>
+	</a>
+	</h2>
 <%@include file="/WEB-INF/incl/adminmenu.app" %>
 </body>
 </html>

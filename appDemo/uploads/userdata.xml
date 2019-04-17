@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	<user>
+		<email>testuser1@fromxml.com</email>
+		<password>Start123!</password>
+		<name>UserXML1</name>
+		<lastname>UserXML1</lastname>
+		<active>1</active>
+		<nrroli>2</nrroli>
+	</user>
+	<user>
+		<email>testuser2@fromxml.com</email>
+		<password>Start123!</password>
+		<name>UserXML2</name>
+		<lastname>UserXML2</lastname>
+		<active>1</active>
+		<nrroli>2</nrroli>
+	</user>
+	<user>
+		<email>testuser3@fromxml.com</email>
+		<password>Start123!</password>
+		<name>UserXML3</name>
+		<lastname>UserXML3</lastname>
+		<active>1</active>
+		<nrroli>2</nrroli>
+	</user>
+	<user>
+		<email>testuser4@fromxml.com</email>
+		<password>Start123!</password>
+		<name>UserXML4</name>
+		<lastname>UserXML4</lastname>
+		<active>1</active>
+		<nrroli>2</nrroli>
+	</user>
+	<user>
+		<email>testuser5@fromxml.com</email>
+		<password>Start123!</password>
+		<name>UserXML5</name>
+		<lastname>UserXML5</lastname>
+		<active>1</active>
+		<nrroli>2</nrroli>
+	</user>
+</users>

@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="profilEdit.pageName"/></title>
 </head>
 <body>
@@ -50,10 +51,10 @@
 			</tr>
 			
 			<tr>
-				<td colspan="2" align="center" bgcolor="#fff">
+				<td colspan="2" align="center" >
 					<input type="submit" value="<s:message code="button.save"/>" />
 					<input type="button" value="<s:message code="button.cancel"/>" 
-						onclick="window.location.href='${pageContext.request.contextPath}/'"/>
+						onclick="window.location.href='${pageContext.request.contextPath}/profil'"/>
 				</td>
 		</tr>
 			

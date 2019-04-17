@@ -1,5 +1,9 @@
 package appdemo.controller;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -7,6 +11,7 @@ import java.util.Map;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +24,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import appdemo.entity.User;
 import appdemo.service.AdminService;
+import appdemo.utilities.UserUtilities;
 
 @Controller
 public class AdminPageController {
@@ -49,6 +57,7 @@ public class AdminPageController {
 	@RequestMapping(value = "/admin/users/{page}")
 	@Secured(value = "ROLE_ADMIN")
 	public String openAdminAllUsersPage(@PathVariable("page") int page,  Model model) {
+		System.out.println("getAllUsersPageable >>");
 		Page<User> pages = getAllUsersPageable(page - 1, false, null);
 		int totalPages = pages.getTotalPages();
 		int currentPage = pages.getNumber();
@@ -116,9 +125,39 @@ public class AdminPageController {
 
 	@GET
 	@RequestMapping(value = "/admin/users/importusers")
-	@Secured(value = "ROLE_ADMIN")
 	public String showUploadPageFromXML(Model model) {
 		return "admin/importusers";
+	}
+	
+	@POST
+	@RequestMapping(value ="/admin/users/upload")
+	@Secured(value = "ROLE_ADMIN")
+	public String importUsersFromXML(@RequestParam("filename") MultipartFile mFile) {
+		
+		String uploadDir = System.getProperty("user.dir") + "/uploads";
+		
+		File file;
+		try {
+			file = new File(uploadDir);
+			if(!file.exists()) {
+				file.mkdir();
+			}
+			
+			Path fileAndPath = Paths.get(uploadDir, mFile.getOriginalFilename());
+			Files.write(fileAndPath, mFile.getBytes());
+			file = new File(fileAndPath.toString());
+			List<User> userList = UserUtilities.userDataLoader(file);
+			
+			for (User user : userList) {
+				System.out.println(user.getEmail());
+				
+			}
+		} catch (Exception e) {
+			
+			//e.printStackTrace();
+		}
+		
+		return "redirect:/admin/users/1";
 	}
 
 	private Map<Integer, String> prepareRoleMap() {
@@ -140,13 +179,15 @@ public class AdminPageController {
 	private Page<User> getAllUsersPageable(int page, boolean isSearching, String param){
 		Page<User> pages;
 		if(!isSearching) {
+			System.out.println("findAll >>");
 			pages = adminService.findAll(PageRequest.of(page, ELEMENTS));
 			
 		}else {
 			pages = adminService.findAllUser(param, PageRequest.of(page, ELEMENTS));
 		}
-
+		System.out.println("before foreach");
 		for (User users : pages) {
+			System.out.println("for >> " +users.getRoles());
 			int numerRoli = users.getRoles().iterator().next().getId();
 			users.setNrRoli(numerRoli);
 		}

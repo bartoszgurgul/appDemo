@@ -7,12 +7,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <title><s:message code="error.errorPage"/></title>
 </head>
 <body>
 <%@include file="/WEB-INF/incl/menu.app" %>
 
-<img src="/resources/images/stamperror.png">
+<img src="/resources/images/images.png">
 <h2>
 	<s:message code="error.defaultErrorMessage"/>
 </h2>
