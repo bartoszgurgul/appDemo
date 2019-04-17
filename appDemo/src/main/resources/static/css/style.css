@@ -4,8 +4,8 @@ body {
 	font-family: sans-serif;
 	font-weight: normal;
 	font-size: 14px;
-	color: #000000;
-	background-color: #ffffff;
+	color: #ffffff;
+	background-color: #3c3c3c;
 	margin-left: auto; 
 	margin-right : auto;
 	margin-top: 10px;
@@ -26,7 +26,7 @@ form {
 }
 
 h2 {
-	color: #008080;
+	color: #00bbbb;
 	font-weight: bold;
 	font-style: italic;
 }
@@ -35,7 +35,7 @@ a {
 	font-size: 14px;
 	font-family: sans-serif;
 	font-weight: bold;
-	color: #000000;
+	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -43,14 +43,14 @@ a:hover {
 	font-size: 14px;
 	font-family: sans-serif;
 	font-weight: bold;
-	color: #0080c0;
+	color: #00bbbb;
 	text-decoration: underline;
 }
 
 .formbutton {
     background-color: white;
     border: 1px solid black;
-    color: #005984;
+    color: #0000ff;
     padding: 10px 10px;
     text-decoration: none;
     margin: 4px 2px;
