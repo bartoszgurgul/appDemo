@@ -11,10 +11,11 @@
 <title><s:message code="menu.users"/></title>
 <script type="text/javascript">
 function changeTrBg(row){
-	row.style.backgroundColor = "#e6e6e6";
+	row.style.border = "2px solid #4d4d4d";
 }
 function defaultTrBg(row){
-	row.style.backgroundColor = "white";
+	row.style.backgroundColor = "#4d4d4d";
+	row.style.border = "0px";
 }
 function startSerach(pParam){
 	var searchWord = document.getElementById('searchString').value;
@@ -32,25 +33,29 @@ function startSerach(pParam){
 </head>
 <body>
 <%@include file="/WEB-INF/incl/menu.app" %>
-<h2><s:message code="menu.users"/></h2>
+	<h2>
+		<a href="/admin/users/1">
+		<s:message code="menu.users"/>
+		</a>
+	</h2>
 <c:set var="licznik" value="${recordStartCounter }"/>
 <div align="center">
 	<div align="right" style="width: 1000px; padding: 2px;">
 		<input type="hidden" name="cp" id="cp" value="${currentPage}"/>
-		<input type="text" id="searchString"/>&nbsp;&nbsp;<input type="button" value="<s:message code="button.search"/>"
-				onclick="startSerach(0);"/><br/>
+		<input type="text" id="searchString"/>&nbsp;&nbsp;
+		<input type="button" value="<s:message code="button.search"/>" onclick="startSerach(0);"/><br/>
 		<span id="errorSearch" style="color: red;"></span>
 	</div>
 <table width="1000" border="0" cellpadding="6" cellspacing="2">
-	<tr bgcolor="#ffddcc">
-		<td width="40" align="center"></td>
-		<td width="40" align="center"><b><s:message code="admin.user.id"/></b></td>
-		<td width="190" align="center"><b><s:message code="register.name"/></b></td>
-		<td width="190" align="center"><b><s:message code="register.lastName"/></b></td>
-		<td width="200" align="center"><b><s:message code="register.email"/></b></td>
-		<td width="100" align="center"><b><s:message code="profil.czyAktywny"/></b></td>
-		<td width="190" align="center"><b><s:message code="profil.rola"/></b></td>
-		<td width="50"></td>
+	<tr class = "headerTb">
+		<td  align="center"></td>
+		<td align="center"><b><s:message code="admin.user.id"/></b></td>
+		<td align="center"><b><s:message code="register.name"/></b></td>
+		<td align="center"><b><s:message code="register.lastName"/></b></td>
+		<td align="center"><b><s:message code="register.email"/></b></td>
+		<td align="center"><b><s:message code="profil.czyAktywny"/></b></td>
+		<td align="center"><b><s:message code="profil.rola"/></b></td>
+		<td ></td>
 	</tr>
 	<c:forEach var="u" items="${userList }">
 		<c:set var="licznik" value="${licznik+1}"/>
@@ -95,8 +100,8 @@ function startSerach(pParam){
 		</tr>
 	</c:forEach>
 </table>
-<table width="1000" border="0" cellpadding="6" cellspacing="0" bgcolor="#ffddcc">
-	<tr>
+<table width="1000" border="0" cellpadding="6" cellspacing="0" >
+	<tr class = "headerTb">
 		<td width="300" align="left">
 			<s:message code="info.page"/> ${currentPage} <s:message code="info.from"/> ${totalPages}
 		</td>

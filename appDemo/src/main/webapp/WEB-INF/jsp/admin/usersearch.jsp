@@ -8,6 +8,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/style.css" />
 <meta charset="UTF-8">
 
 <title><s:message code="menu.users" /></title>
