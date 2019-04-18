@@ -1,6 +1,6 @@
 <table class="tableMenuBg" cellpadding= "8" cellspacing = "4" >
 	<tr>
-		<td align="left" width="900">
+		<td align="left" width="auto">
 			<a href="/"><s:message code="menu.mainPage"/></a>&nbsp;&nbsp;
 			<sec:authorize access="hasRole('ROLE_ADMIN')">
 				<a href="/admin"><s:message code="menu.adminPage"/></a>
