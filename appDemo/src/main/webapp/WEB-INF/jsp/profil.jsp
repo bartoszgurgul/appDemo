@@ -66,7 +66,7 @@
 	
 	<tr>
 		<td width="130" align="right" >
-			<h2><s:message code="profil.rola"/></h2>
+			<s:message code="profil.rola"/>
 		</td>
 		<td width="270" align="left">
 			<c:choose>

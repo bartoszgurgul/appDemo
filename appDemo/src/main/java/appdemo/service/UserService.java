@@ -16,4 +16,6 @@ public interface UserService {
 	public void updateUserProfile(String newName, String lastName, String newEmail, Integer id);
 
 	public List<User> findAll();
+	
+	public void updateActivation(int activeCode, String activationCode);
 }

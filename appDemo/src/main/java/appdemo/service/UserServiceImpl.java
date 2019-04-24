@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void saveUser(User user) {
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-		user.setActive(1);
+		user.setActive(0);
 		
 		Role role = roleRepository.findByRole("ROLE_ADMIN");
 		//TODO tutaj powinno być poprawione
@@ -68,6 +68,12 @@ public class UserServiceImpl implements UserService {
 		List<User> userList = userRepository.findAll();
 		
 		return userList;
+	}
+
+	@Override
+	public void updateActivation(int activeCode, String activationCode) {
+		userRepository.updateActivation(activeCode, activationCode);
+		
 	}
 
 }

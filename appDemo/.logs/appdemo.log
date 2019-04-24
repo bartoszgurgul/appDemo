@@ -1,0 +1,226 @@
+[2019-04-24 09:18:28 ] [org.springframework.boot.StartupInfoLogger] [main] [50] [INFO ] Starting AppDemoApplication on dell-bgur with PID 5524 (C:\Users\bgurgul\git\appDemo\appDemo\target\classes started by bgurgul in C:\Users\bgurgul\git\appDemo\appDemo)
+[2019-04-24 09:18:28 ] [org.springframework.boot.SpringApplication] [main] [662] [INFO ] No active profile set, falling back to default profiles: default
+[2019-04-24 09:18:29 ] [org.springframework.context.support.AbstractApplicationContext] [main] [590] [INFO ] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@12359a82: startup date [Wed Apr 24 09:18:29 CEST 2019]; root of context hierarchy
+[2019-04-24 09:18:37 ] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [main] [153] [INFO ] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2019-04-24 09:18:38 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aa1e674e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:18:39 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$42cc2f88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:18:39 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:18:39 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5a8c93' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:18:39 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$67a0d23a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:18:39 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:18:39 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$299eb480] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:18:43 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [91] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2019-04-24 09:18:43 ] [org.apache.juli.logging.DirectJDKLog] [main] [180] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2019-04-24 09:18:43 ] [org.apache.juli.logging.DirectJDKLog] [main] [180] [INFO ] Starting service [Tomcat]
+[2019-04-24 09:18:43 ] [org.apache.juli.logging.DirectJDKLog] [main] [180] [INFO ] Starting Servlet Engine: Apache Tomcat/8.5.32
+[2019-04-24 09:18:43 ] [org.apache.juli.logging.DirectJDKLog] [localhost-startStop-1] [180] [INFO ] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre-10.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\Users\bgurgul\AppData\Local\Microsoft\WindowsApps;C:\Users\bgurgul\AppData\Roaming\npm;.]
+[2019-04-24 09:18:46 ] [org.apache.juli.logging.DirectJDKLog] [localhost-startStop-1] [180] [INFO ] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2019-04-24 09:18:46 ] [org.apache.juli.logging.DirectJDKLog] [localhost-startStop-1] [180] [INFO ] Initializing Spring embedded WebApplicationContext
+[2019-04-24 09:18:46 ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [localhost-startStop-1] [285] [INFO ] Root WebApplicationContext: initialization completed in 16728 ms
+[2019-04-24 09:18:46 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'characterEncodingFilter' to: [/*]
+[2019-04-24 09:18:46 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2019-04-24 09:18:46 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2019-04-24 09:18:46 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'requestContextFilter' to: [/*]
+[2019-04-24 09:18:46 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'springSecurityFilterChain' to: [/*]
+[2019-04-24 09:18:46 ] [org.springframework.boot.web.servlet.ServletRegistrationBean] [localhost-startStop-1] [187] [INFO ] Servlet dispatcherServlet mapped to [/]
+[2019-04-24 09:18:47 ] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2019-04-24 09:18:49 ] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2019-04-24 09:18:49 ] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [main] [361] [INFO ] Building JPA container EntityManagerFactory for persistence unit 'default'
+[2019-04-24 09:18:49 ] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2019-04-24 09:18:50 ] [org.hibernate.Version] [main] [45] [INFO ] HHH000412: Hibernate Core {5.2.17.Final}
+[2019-04-24 09:18:50 ] [org.hibernate.cfg.Environment] [main] [213] [INFO ] HHH000206: hibernate.properties not found
+[2019-04-24 09:18:50 ] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [66] [INFO ] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2019-04-24 09:18:51 ] [org.hibernate.dialect.Dialect] [main] [157] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2019-04-24 09:18:55 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [415] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2019-04-24 09:18:59 ] [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] [main] [47] [INFO ] HHH000397: Using ASTQueryTranslatorFactory
+[2019-04-24 09:19:01 ] [org.springframework.context.support.AbstractApplicationContext] [main] [558] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'profilController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void appdemo.repository.UserRepository.updateActivation(int,java.lang.String)!
+[2019-04-24 09:19:01 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [597] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2019-04-24 09:19:01 ] [com.zaxxer.hikari.HikariDataSource] [main] [381] [INFO ] HikariPool-1 - Shutdown initiated...
+[2019-04-24 09:19:01 ] [com.zaxxer.hikari.HikariDataSource] [main] [383] [INFO ] HikariPool-1 - Shutdown completed.
+[2019-04-24 09:19:01 ] [org.apache.juli.logging.DirectJDKLog] [main] [180] [INFO ] Stopping service [Tomcat]
+[2019-04-24 09:19:01 ] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [main] [101] [INFO ] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2019-04-24 09:19:01 ] [org.springframework.boot.SpringApplication] [main] [845] [ERROR] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'profilController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void appdemo.repository.UserRepository.updateActivation(int,java.lang.String)!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:586)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at appdemo.AppDemoApplication.main(AppDemoApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'userRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void appdemo.repository.UserRepository.updateActivation(int,java.lang.String)!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:586)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Validation failed for query for method public abstract void appdemo.repository.UserRepository.updateActivation(int,java.lang.String)!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	... 32 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Validation failed for query for method public abstract void appdemo.repository.UserRepository.updateActivation(int,java.lang.String)!
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:93)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.<init>(SimpleJpaQuery.java:63)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromMethodWithQueryString(JpaQueryFactory.java:76)
+	at org.springframework.data.jpa.repository.query.JpaQueryFactory.fromQueryAnnotation(JpaQueryFactory.java:56)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$DeclaredQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:139)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:206)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:553)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:546)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+	at java.base/java.util.Iterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Unknown Source)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:548)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:538)
+	at java.base/java.util.Optional.map(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:538)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$3(RepositoryFactoryBeanSupport.java:286)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:141)
+	at org.springframework.data.util.Lazy.get(Lazy.java:63)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:289)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	... 42 common frames omitted
+Caused by: java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: user is not mapped [update user u set u.active = :activeParam where u.activationCode = :activationCode]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:133)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:164)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:670)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350)
+	at com.sun.proxy.$Proxy108.createQuery(Unknown Source)
+	at org.springframework.data.jpa.repository.query.SimpleJpaQuery.validateQuery(SimpleJpaQuery.java:87)
+	... 71 common frames omitted
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: user is not mapped [update user u set u.active = :activeParam where u.activationCode = :activationCode]
+	at org.hibernate.hql.internal.ast.QuerySyntaxException.generateQueryException(QuerySyntaxException.java:79)
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:217)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:141)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:115)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:77)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:553)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:662)
+	... 79 common frames omitted
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: user is not mapped
+	at org.hibernate.hql.internal.ast.util.SessionFactoryHelper.requireClassPersister(SessionFactoryHelper.java:169)
+	at org.hibernate.hql.internal.ast.tree.FromElementFactory.addFromElement(FromElementFactory.java:91)
+	at org.hibernate.hql.internal.ast.tree.FromClause.addFromElement(FromClause.java:79)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.createFromElement(HqlSqlWalker.java:326)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElement(HqlSqlBaseWalker.java:3706)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElementList(HqlSqlBaseWalker.java:3595)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromClause(HqlSqlBaseWalker.java:720)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.updateStatement(HqlSqlBaseWalker.java:377)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:269)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:266)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:189)
+	... 85 common frames omitted
+[2019-04-24 09:33:59 ] [org.springframework.boot.StartupInfoLogger] [main] [50] [INFO ] Starting AppDemoApplication on dell-bgur with PID 23240 (C:\Users\bgurgul\git\appDemo\appDemo\target\classes started by bgurgul in C:\Users\bgurgul\git\appDemo\appDemo)
+[2019-04-24 09:33:59 ] [org.springframework.boot.SpringApplication] [main] [662] [INFO ] No active profile set, falling back to default profiles: default
+[2019-04-24 09:34:00 ] [org.springframework.context.support.AbstractApplicationContext] [main] [590] [INFO ] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@12359a82: startup date [Wed Apr 24 09:34:00 CEST 2019]; root of context hierarchy
+[2019-04-24 09:34:04 ] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [main] [153] [INFO ] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2019-04-24 09:34:04 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3195426c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:34:04 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$ca430aa6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:34:04 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:34:04 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@68a78f3c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:34:04 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$ef17ad58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:34:04 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:34:04 ] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [main] [326] [INFO ] Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$b1158f9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2019-04-24 09:34:06 ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [main] [91] [INFO ] Tomcat initialized with port(s): 8080 (http)
+[2019-04-24 09:34:06 ] [org.apache.juli.logging.DirectJDKLog] [main] [180] [INFO ] Initializing ProtocolHandler ["http-nio-8080"]
+[2019-04-24 09:34:06 ] [org.apache.juli.logging.DirectJDKLog] [main] [180] [INFO ] Starting service [Tomcat]
+[2019-04-24 09:34:06 ] [org.apache.juli.logging.DirectJDKLog] [main] [180] [INFO ] Starting Servlet Engine: Apache Tomcat/8.5.32
+[2019-04-24 09:34:06 ] [org.apache.juli.logging.DirectJDKLog] [localhost-startStop-1] [180] [INFO ] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre-10.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\Users\bgurgul\AppData\Local\Microsoft\WindowsApps;C:\Users\bgurgul\AppData\Roaming\npm;.]
+[2019-04-24 09:34:07 ] [org.apache.juli.logging.DirectJDKLog] [localhost-startStop-1] [180] [INFO ] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+[2019-04-24 09:34:07 ] [org.apache.juli.logging.DirectJDKLog] [localhost-startStop-1] [180] [INFO ] Initializing Spring embedded WebApplicationContext
+[2019-04-24 09:34:07 ] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [localhost-startStop-1] [285] [INFO ] Root WebApplicationContext: initialization completed in 7435 ms
+[2019-04-24 09:34:07 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'characterEncodingFilter' to: [/*]
+[2019-04-24 09:34:07 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2019-04-24 09:34:07 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2019-04-24 09:34:07 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'requestContextFilter' to: [/*]
+[2019-04-24 09:34:07 ] [org.springframework.boot.web.servlet.AbstractFilterRegistrationBean] [localhost-startStop-1] [245] [INFO ] Mapping filter: 'springSecurityFilterChain' to: [/*]
+[2019-04-24 09:34:07 ] [org.springframework.boot.web.servlet.ServletRegistrationBean] [localhost-startStop-1] [187] [INFO ] Servlet dispatcherServlet mapped to [/]
+[2019-04-24 09:34:08 ] [com.zaxxer.hikari.HikariDataSource] [main] [110] [INFO ] HikariPool-1 - Starting...
+[2019-04-24 09:34:08 ] [com.zaxxer.hikari.HikariDataSource] [main] [123] [INFO ] HikariPool-1 - Start completed.
+[2019-04-24 09:34:08 ] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [main] [361] [INFO ] Building JPA container EntityManagerFactory for persistence unit 'default'
+[2019-04-24 09:34:08 ] [org.hibernate.jpa.internal.util.LogHelper] [main] [31] [INFO ] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2019-04-24 09:34:08 ] [org.hibernate.Version] [main] [45] [INFO ] HHH000412: Hibernate Core {5.2.17.Final}
+[2019-04-24 09:34:08 ] [org.hibernate.cfg.Environment] [main] [213] [INFO ] HHH000206: hibernate.properties not found
+[2019-04-24 09:34:09 ] [org.hibernate.annotations.common.reflection.java.JavaReflectionManager] [main] [66] [INFO ] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2019-04-24 09:34:09 ] [org.hibernate.dialect.Dialect] [main] [157] [INFO ] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[2019-04-24 09:34:10 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [415] [INFO ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2019-04-24 09:34:11 ] [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] [main] [47] [INFO ] HHH000397: Using ASTQueryTranslatorFactory
+[2019-04-24 09:34:12 ] [org.springframework.context.support.AbstractApplicationContext] [main] [558] [WARN ] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'registerController': Unsatisfied dependency expressed through field 'emailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'emailsender.EmailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+[2019-04-24 09:34:12 ] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [main] [597] [INFO ] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2019-04-24 09:34:12 ] [com.zaxxer.hikari.HikariDataSource] [main] [381] [INFO ] HikariPool-1 - Shutdown initiated...
+[2019-04-24 09:34:12 ] [com.zaxxer.hikari.HikariDataSource] [main] [383] [INFO ] HikariPool-1 - Shutdown completed.
+[2019-04-24 09:34:12 ] [org.apache.juli.logging.DirectJDKLog] [main] [180] [INFO ] Stopping service [Tomcat]
+[2019-04-24 09:34:12 ] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [main] [101] [INFO ] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2019-04-24 09:34:12 ] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [main] [42] [ERROR] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field emailSender in appdemo.controller.RegisterController required a bean of type 'emailsender.EmailSender' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'emailsender.EmailSender' in your configuration.
+

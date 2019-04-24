@@ -45,6 +45,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/login").permitAll()
 		.antMatchers("/register").permitAll()
 		.antMatchers("/adduser").permitAll()
+// bardzo ważna proprawka - musimy dodać kolejny wyjatek, strone która mozn wejsc bez uprawnien bez
+		// logowania - uzytkownik dodaje maila z adresem localhoste:8080/activatelink/ !@%^&*( i wchodzi tam 
+		// akcja na wejsciu na linku jest uruchomienie funkcji a dokładnie zapytania SQL w repository który 
+		// juz w bazie danych sprawdza który link i aktywuje
 		.antMatchers("/activatelink/**").permitAll()
 //		.antMatchers("/admin").hasAuthority("ROLE_ADMIN")
 		.anyRequest().authenticated()

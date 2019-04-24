@@ -21,6 +21,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "user")
 public class User {
 	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "user_id")
@@ -50,6 +51,9 @@ public class User {
 	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
 
+	@Column(name="activation_code")
+	private String activationCode;
+	
 	@Transient
 	private int nrRoli;
 	
@@ -122,6 +126,18 @@ public class User {
 	}
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
+	}
+	/**
+	 * @return the activationCode
+	 */
+	public String getActivationCode() {
+		return activationCode;
+	}
+	/**
+	 * @param activationCode the activationCode to set
+	 */
+	public void setActivationCode(String activationCode) {
+		this.activationCode = activationCode;
 	}
 
 }

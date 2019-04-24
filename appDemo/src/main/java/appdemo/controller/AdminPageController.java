@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 
@@ -31,6 +32,14 @@ import appdemo.entity.User;
 import appdemo.service.AdminService;
 import appdemo.utilities.UserUtilities;
 
+
+/** 
+ * zapisywanie to POST 
+ * pobieranie GET
+ * usuwanie delete
+ * @author bgurgul
+ *
+ */
 @Controller
 public class AdminPageController {
 
@@ -147,19 +156,29 @@ public class AdminPageController {
 			Files.write(fileAndPath, mFile.getBytes());
 			file = new File(fileAndPath.toString());
 			List<User> userList = UserUtilities.userDataLoader(file);
-			
-			for (User user : userList) {
-				System.out.println(user.getEmail());
-				
-			}
+			//adminService.insertInBatch(userList);
+			adminService.saveAll(userList);
+			file.delete();
 		} catch (Exception e) {
 			
-			//e.printStackTrace();
+			e.printStackTrace();
 		}
 		
 		return "redirect:/admin/users/1";
 	}
 
+	@DELETE
+	@RequestMapping(value = "/admin/users/delete/{id}")
+	@Secured(value = "ROLE_ADMIN")
+	public String deleteUser(@PathVariable("id") int id) {
+		LOG.info("Wywołanie AdminPageController.deleteUser");
+		System.out.println("Start deleteUser");
+		adminService.deleteUserById(id);
+		return "redirect:/admin/users/1";
+		
+	}
+	
+	
 	private Map<Integer, String> prepareRoleMap() {
 		Locale locale = Locale.getDefault();
 		Map<Integer, String> roleMap = new HashMap<>();
@@ -179,15 +198,15 @@ public class AdminPageController {
 	private Page<User> getAllUsersPageable(int page, boolean isSearching, String param){
 		Page<User> pages;
 		if(!isSearching) {
-			System.out.println("findAll >>");
+			
 			pages = adminService.findAll(PageRequest.of(page, ELEMENTS));
 			
 		}else {
 			pages = adminService.findAllUser(param, PageRequest.of(page, ELEMENTS));
 		}
-		System.out.println("before foreach");
+		
 		for (User users : pages) {
-			System.out.println("for >> " +users.getRoles());
+			
 			int numerRoli = users.getRoles().iterator().next().getId();
 			users.setNrRoli(numerRoli);
 		}

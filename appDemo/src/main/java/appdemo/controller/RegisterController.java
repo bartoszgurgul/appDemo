@@ -13,11 +13,14 @@ import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import appdemo.entity.User;
 import appdemo.service.UserService;
+import appdemo.utilities.AppdemoUtils;
 import appdemo.validators.UserRegisterValidator;
+import emailsender.EmailSender;
 
 /**
  * @author BartoszGurgul
@@ -38,6 +41,9 @@ public class RegisterController {
 	 */
 	@Autowired
 	MessageSource messageSource;
+	
+	@Autowired
+	private EmailSender emailSender;
 	
 	@GET
 	@RequestMapping(value = "/register")
@@ -74,12 +80,36 @@ public class RegisterController {
 			returnPage = "register";
 		}
 		else {
-		
+			user.setActivationCode(AppdemoUtils.randomStringGenerator());
+			
+			String content = "Wymagane potwierdzenie rejestracji. Kliknij w poniższy link aby aktywować"
+					+ "konto \n http://localhost:8080/activatelink/" + user.getActivationCode();
+			
+					
 			userService.saveUser(user);
+			emailSender.sendEmail(user.getEmail(), "Potwierdzenie rejestracji", content);
 			model.addAttribute("message", messageSource.getMessage("user.register.success", null, locale));
-			model.addAttribute("user", new User());
+			//model.addAttribute("user", new User());
 			returnPage = "register";
 		}
 		return returnPage;
 	}
+	
+	@POST
+	@RequestMapping(value = "/activatelink/{activationCode}")
+	public String activateAccount(@PathVariable("activationCode") String activationCode, Model model, Locale locale) {
+		// uruchomienie sql 
+		userService.updateActivation(1, activationCode);
+		
+		// wpuszczenie informacji na strone 
+		model.addAttribute("message", messageSource.getMessage("user.register.success", null, locale));
+		
+		return "index";
+	}
+	
+	
+	
+	
+	
+	
 }
